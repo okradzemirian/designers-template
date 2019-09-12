@@ -46,6 +46,10 @@
 .contact-form {
     text-align: end;
 
+    @media only screen and (max-width: 450px) {
+        text-align: center;
+    }
+
     &__button {
         margin: 1rem;
     }
