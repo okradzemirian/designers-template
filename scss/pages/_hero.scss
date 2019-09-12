@@ -1,0 +1,52 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(#000, 0.8), rgba(#000, 0.8)),
+        url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__button-1 {
+        margin-right: 2rem;
+
+        @media only screen and (max-width: 450px) {
+            margin: 0 0 2rem 0;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        z-index: 5;
+
+        @media only screen and (max-width: 450px) {
+            flex-direction: column;
+        }
+    }
+
+    &__heading {
+        color: $white;
+        font-size: 6rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        z-index: 5;
+
+        span {
+            color: $primary;
+            font-weight: 400;
+        }
+
+        @include media(md) {
+            font-size: 4rem;
+        }
+
+        @media only screen and (max-width: 450px) {
+            font-size: 3.5rem;
+        }
+    }
+}

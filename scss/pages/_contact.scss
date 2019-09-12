@@ -1,0 +1,52 @@
+.contact {
+    background-color: $bg;
+
+    &__container {
+        display: flex;
+
+        @include media(lg) {
+            flex-direction: column;
+
+            .contact-info {
+                align-self: center;
+
+                &__item-label,
+                &__item-info {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.contact-info {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__item {
+        margin-bottom: 3rem;
+    }
+    &__item-label {
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        color: $primary;
+        text-transform: uppercase;
+    }
+    &__item-info {
+        color: $grey;
+    }
+}
+
+.contact-form-wrapper {
+    flex-grow: 1;
+}
+
+.contact-form {
+    text-align: end;
+
+    &__button {
+        margin: 1rem;
+    }
+}

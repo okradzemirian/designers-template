@@ -1,0 +1,27 @@
+.input-group {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .input {
+        flex-grow: 1;
+        margin: 1rem;
+    }
+}
+
+.input {
+    padding: 1.5rem 2rem;
+    border-radius: 100px;
+    border: none;
+    min-width: 1px;
+
+    &::placeholder {
+        font-size: 1.5rem;
+        color: $dark;
+    }
+}
+
+.textarea {
+    border-radius: $br-radius;
+    resize: none;
+}

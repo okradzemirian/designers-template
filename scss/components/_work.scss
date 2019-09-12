@@ -1,0 +1,70 @@
+.work {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+
+    @include media(md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    @include media(xs) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+
+        &:hover {
+            .work__fig {
+                transform: translateY(0);
+
+                opacity: 0.9;
+                visibility: visible;
+            }
+            .work__heading,
+            .work__description {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__heading {
+        transform: translateY(-0.5rem);
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 0.5rem;
+    }
+    &__description {
+        margin-top: 0.5rem;
+
+        transform: translateY(0.5rem);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &__fig {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: $br-radius;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(1rem);
+        background-color: $white;
+        transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out,
+            background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+}

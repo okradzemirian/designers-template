@@ -1,0 +1,46 @@
+.service {
+    width: 33.333%;
+    max-width: 33.333%;
+    border-radius: $br-radius;
+    padding: 0 1rem;
+    transition: transform 0.25s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03) translateY(-1rem);
+    }
+
+    @include media(md) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @include media(md) {
+        margin-bottom: 4rem;
+    }
+
+    &__content {
+        height: 100%;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white;
+    }
+
+    &__logo {
+        width: 4.5rem;
+        height: 4.5rem;
+        fill: $primary;
+    }
+
+    &__heading {
+        margin: 2rem 0;
+        font-weight: 600;
+    }
+
+    &__paragraph {
+        color: $grey;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

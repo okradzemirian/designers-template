@@ -1,0 +1,32 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__content {
+        flex: 0 0 48%;
+        max-width: 48%;
+
+        @include media(md) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__paragraph {
+        word-break: keep-all;
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+    }
+
+    &__img-wrapper {
+        flex: 0 1 48%;
+
+        @include media(md) {
+            display: none;
+        }
+    }
+}
